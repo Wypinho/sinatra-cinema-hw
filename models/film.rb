@@ -66,6 +66,13 @@ class Film
     return most_popular.show_time
   end
 
+  def self.find(id)
+      sql = "SELECT * FROM films
+      WHERE id = $1"
+      values = [id]
+      film_data = SqlRunner.run(sql, values)
+      return Films.map_item(film_data)
+  end
 
   # def most_popular_showing()
   #   # binding.pry
