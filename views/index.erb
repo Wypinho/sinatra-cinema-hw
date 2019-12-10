@@ -1,5 +1,7 @@
+<% films = Film.all %>
+<% film_names = films.map {|film| film.title} %>
 <ul>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li><%= film_names[0] %></li>
+  <li><%= film_names[1] %></li>
+  <li><%= film_names[2] %></li>
 </ul>
