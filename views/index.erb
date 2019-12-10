@@ -1,5 +1,7 @@
 <ul>
+  <% ref = 0 %>
   <% for film in @films %>
-    <li><%= "#{film.title}" %></li>
+    <% ref += 1 %>
+    <li><a href="/films/#{ref}"><%= "#{film.title}" %></a></li>
   <% end %>
 </ul>

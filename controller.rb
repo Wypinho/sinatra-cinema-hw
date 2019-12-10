@@ -9,3 +9,8 @@ get '/index' do
   @films = Film.all
   erb(:index)
 end
+
+get '/films/:ref' do
+  
+  erb(:films)
+end
